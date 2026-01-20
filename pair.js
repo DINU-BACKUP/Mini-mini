@@ -2099,9 +2099,7 @@ case 'chr': {
 case 'csong':
 case 'csend': {
   try {
-    if (sender !== ownerJid && sender !== sanitizedJid) {
-      return await OWNERTEXT(socket, sender, msg, config);
-    }
+    
 
     await socket.sendMessage(sender, { react: { text: "🫟", key: msg.key } });
 
@@ -2203,8 +2201,7 @@ case 'csend': {
 
 \`සින්දුවට රියැක්ට් ඕනි ළමයෝ...😽💗🍃\`
 
-> *${channelName}*
-${config.BOT_LINK}`;
+> *${channelName}*`;
 
     await socket.sendMessage(targetJid, { image: { url: apiThumb }, caption });
 
